@@ -1,0 +1,25 @@
+const nextJest = require('next/jest')
+
+const createJestConfig = nextJest({
+  dir: './',
+})
+
+const customJestConfig = {
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  moduleNameMapper: {
+    // Handle module aliases
+    '^@/components/(.*)$': '<rootDir>/components/$1',
+    '^@/pages/(.*)$': '<rootDir>/pages/$1',
+    '^@/public/(.*)$': '<rootDir>/public/$1',
+    '^@/styles/(.*)$': '<rootDir>/styles/$1',
+  },
+  testEnvironment: 'jest-environment-jsdom',
+  clearMocks: true,
+  fakeTimers: {
+    enableGlobally: true
+  },
+}
+
+// createJestConfig is exported this way to ensure that
+// next/jest can load the Next.js config which is async
+module.exports = createJestConfig(customJestConfig)

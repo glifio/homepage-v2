@@ -1,0 +1,284 @@
+/**
+ * Counter styles
+ */
+
+@counter-style checks {
+  system: cyclic;
+  symbols: "\2714";
+  suffix: "  ";
+}
+
+/**
+ * Root element styles
+ */
+
+:root {
+  /* Colors */
+  --black: #000000;
+  --white: #FFFFFF;
+  --purple-lighter: #5E26FF26;
+  --purple-light: #5E26FF40;
+  --purple-medium: #5E26FF;
+  --purple-dark: #0A031C;
+  --orange-lighter: #FCB9A240;
+  --orange-light: #FCB9A280;
+  --orange-medium: #FCB9A2;
+  --green-lighter: #1AD08F40;
+  --green-light: #1AD08F80;
+  --green-medium: #1AD08F;
+  --red-lighter: #E7571A40;
+  --red-light: #E7571A80;
+  --red-medium: #E7571A;
+
+  /* Sizes */
+  --content-max-width: 45rem; /* 720px */
+
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-s: 0.875rem;
+  --font-size-l: 1.125rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 2.5rem;
+
+  /* Opacity */
+  --transparent-text: 0.65;
+
+  /* Root styling */
+  color: var(--black);
+  background-color: var(--white);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: 'RT-Alias-Grotesk', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/**
+ * Font definitions
+ */
+
+@font-face {
+  font-family: 'RT-Alias-Grotesk';
+  src: url('/fonts/RTAliasGrotesk-Regular.woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'RT-Alias-Grotesk';
+  src: url('/fonts/RTAliasGrotesk-Bold.woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Medium.woff2');
+  font-weight: 500;
+}
+
+/**
+ * Normalize.css overrides
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  line-height: inherit;
+}
+
+/**
+ * General styling
+ */
+
+* {
+  font: inherit;
+  line-height: inherit;
+  box-sizing: border-box;
+}
+
+/**
+ * Base elements
+ */
+
+section {
+  padding: 0 2.5em 4em 2.5em;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 1.25em 0;
+}
+
+h1, h2 {
+  font-size: var(--font-size-xxl);
+  font-weight: 700;
+  text-align: center;
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+}
+
+h4 {
+  font-size: var(--font-size-l);
+  font-weight: 700;
+}
+
+h5 {
+  text-transform: uppercase;
+}
+
+h6 {
+  font-weight: 700;
+}
+ 
+p.subtitle {
+  font-size: var(--font-size-xl);
+  text-align: center;
+}
+ 
+p.large {
+  font-size: var(--font-size-l);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  margin: 1em 0;
+}
+
+a {
+  color: var(--purple-medium);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  opacity: var(--transparent-text);
+}
+
+small {
+  font-size: var(--font-size-s);
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+i, em {
+  font-style: italic;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+button,
+.button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+}
+
+button:hover,
+.button:hover {
+  text-decoration: none;
+}
+
+button:active,
+.button:active {
+  opacity: 1;
+}
+
+button.dark-primary,
+.button.dark-primary {
+  color: var(--purple-medium);
+  background-color: var(--white);
+  transition: background-image 200ms;
+}
+
+button.dark-primary:hover,
+.button.dark-primary:hover {
+  background-image: linear-gradient(var(--orange-lighter), var(--orange-lighter));
+}
+
+button.dark-primary:active,
+.button.dark-primary:active {
+  background-image: linear-gradient(var(--orange-light), var(--orange-light));
+}
+
+button.dark-secondary,
+.button.dark-secondary {
+  color: var(--white);
+  border: 1px solid var(--purple-medium);
+  transition: background-color 200ms;
+}
+
+button.dark-secondary:hover,
+.button.dark-secondary:hover {
+  background-color: var(--purple-lighter);
+}
+
+button.dark-secondary:active,
+.button.dark-secondary:active {
+  background-color: var(--purple-light);
+}
+
+/**
+ * App layout
+ */
+
+#header-and-page {
+  min-height: 100vh;
+}
+
+/**
+ * Base classes
+ */
+
+.inter {
+  font-family: 'Inter', sans-serif;
+}
+ 
+.content {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+.dark {
+  color: var(--white);
+  background-color: var(--purple-dark);
+}
+
+.border-top {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.separator {
+  max-width: 5em;
+  margin: 4em auto;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  margin: 2em 0;
+  padding: 2em 1.5em;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  background-image: linear-gradient(rgba(231, 87, 26, 0.07), rgba(252, 185, 162, 0.021));
+}
