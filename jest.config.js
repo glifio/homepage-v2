@@ -12,11 +12,18 @@ const customJestConfig = {
     '^@/pages/(.*)$': '<rootDir>/pages/$1',
     '^@/public/(.*)$': '<rootDir>/public/$1',
     '^@/styles/(.*)$': '<rootDir>/styles/$1',
+    // ESM modules,
+    'multiformats/basics': '<rootDir>/node_modules/multiformats/cjs/src/basics.js',
+    'multiformats/cid': '<rootDir>/node_modules/multiformats/cjs/src/cid.js',
+    multiformats: '<rootDir>/node_modules/multiformats/cjs/src/index.js',
+    uint8arrays: '<rootDir>/node_modules/uint8arrays/cjs/src/index.js',
+    '@ipld/dag-cbor': '<rootDir>/node_modules/@ipld/dag-cbor/cjs/index.js',
+    cborg: '<rootDir>/node_modules/cborg/cjs/cborg.js',
   },
   testEnvironment: 'jest-environment-jsdom',
   clearMocks: true,
   fakeTimers: {
-    enableGlobally: true
+    enableGlobally: true,
   },
 }
 
