@@ -7,7 +7,9 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
-    // Handle module aliases
+    // @svgr/webpack
+    '\.svg$': '<rootDir>/__mocks__/svg.js',
+    // Module aliases
     '^@/components/(.*)$': '<rootDir>/components/$1',
     '^@/pages/(.*)$': '<rootDir>/pages/$1',
     '^@/public/(.*)$': '<rootDir>/public/$1',
