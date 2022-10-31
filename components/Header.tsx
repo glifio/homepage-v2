@@ -177,5 +177,5 @@ export const Header = ({ headerCloseRef }: HeaderProps) => {
 }
 
 interface HeaderProps {
-  headerCloseRef: MutableRefObject<() => void | null>
+  headerCloseRef: MutableRefObject<() => void>
 }

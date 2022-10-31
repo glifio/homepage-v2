@@ -30,7 +30,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     'staking',
   ].join(',')
 
-  const headerCloseRef = useRef<() => void | null>(null)
+  const headerCloseRef = useRef(() => {
+    // Set by Header
+  })
 
   return (
     <>
