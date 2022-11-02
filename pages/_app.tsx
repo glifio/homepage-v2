@@ -40,6 +40,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>{title}</title>
         <meta name='description' content={description} />
         <meta name='keywords' content={keywords} />
+        <meta name="viewport" content="width=480, maximum-scale=1, user-scalable=0" />
         <meta property='og:type' content='website' />
         <meta property='og:url' content={url} />
         <meta property='og:title' content={title} />
