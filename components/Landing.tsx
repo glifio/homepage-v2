@@ -132,19 +132,19 @@ export const Landing = () => {
       <div className='foreground'>
         <div className='launching inter'>
           <div className='bracket left' />
-          <p>Glif lending, launching in 2023</p>
+          <p>Glif pools, launching in 2023</p>
           <div className='bracket right' />
         </div>
         <h1>
-          The only Filecoin lending protocol, designed for miners <i>and</i>{' '}
+          The only Filecoin staking protocol, designed for miners <i>and</i>{' '}
           retail investors.
         </h1>
         <div className='buttons'>
-          <SmartLink className='button dark-primary' href=''>
-            Get early access
-          </SmartLink>
-          <SmartLink className='button dark-secondary' href=''>
-            Learn more
+          <SmartLink
+            className='button dark-primary'
+            href='https://discord.gg/HbNMdFHN9k'
+          >
+            Join the early community
           </SmartLink>
         </div>
       </div>

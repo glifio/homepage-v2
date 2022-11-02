@@ -3,7 +3,7 @@ import { Landing } from '@/components/Landing'
 import { Features } from '@/components/Features'
 import { Problem } from '@/components/Problem'
 import { Apps } from '@/components/Apps'
-import { UsedBy } from '@/components/UsedBy'
+// import { UsedBy } from '@/components/UsedBy'
 // import { FAQ } from '@/components/FAQ'
 
 const Home: NextPage = () => (
@@ -12,7 +12,7 @@ const Home: NextPage = () => (
     <Features />
     <Problem />
     <Apps />
-    <UsedBy />
+    {/* <UsedBy /> */}
     {/* <FAQ /> */}
   </>
 )

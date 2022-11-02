@@ -24,26 +24,26 @@ export const Features = () => {
   return (
     <FeaturesEl className='dark'>
       <div className='content'>
-        <h2>Features of the Glif Lending Marketplace</h2>
+        <h2>Features of the Glif Staking Marketplace</h2>
         <p className='subtitle'>
           Powering capital efficiency on Filecoin. We help miners scale and
-          lenders earn rewards directly from their wallet.
+          stakers earn rewards directly from their wallet.
         </p>
         <div className='features'>
           <div className='feature'>
             <FeatureCard
               Icon={LendIcon}
-              title='Lend'
-              description='Earn rewards on your Filecoin, while supporting the network.'
-              buttonText='Get early access'
-              buttonHref=''
+              title='Stake'
+              description='Earn rewards on your Filecoin while supporting the network.'
+              buttonText='Join our early community'
+              buttonHref='https://discord.gg/HbNMdFHN9k'
             />
             <FeatureChecklist
               title='Investors'
               items={[
-                'Lend directly from Ledger, Metamask, or your favorite wallet.',
-                'Transparency. Get clear up-front rates and risk profiles.',
-                'Use our Filecoin Rewards Calculator to compare rewards across lending pools.',
+                'Stake directly from Glif, Ledger, Metamask, or your favorite Ethereum wallet.',
+                'Diversify your portfolio and returns by staking into pools with varying degrees of risk.',
+                "Don't give up custody of your Filecoin tokens.",
               ]}
             />
           </div>
@@ -51,16 +51,16 @@ export const Features = () => {
             <FeatureCard
               Icon={BorrowIcon}
               title='Borrow'
-              description='Borrow Filecoin with no collateral and maintain ownership of your miner.'
+              description='Borrow Filecoin from multiple pools at once and maintain ownership of your miner.'
               buttonText='Get early access'
-              buttonHref=''
+              buttonHref='https://docs.google.com/forms/d/e/1FAIpQLSfrDffDpFBLOnwSq5B-NqGYSJ3W6U7q_yrKoHvUHL8QBL0-Og/viewform'
             />
             <FeatureChecklist
               title='Miners'
               items={[
-                'Self-manage your loans. Compare lending rates of multiple lending pools.',
-                'Scale your mining operation without tying up collateral. Use your mining reputation to secure loans.',
-                "Don't give up ownership of your miner. Stay in control of your mining operation.",
+                'Compare interest rates, payment plans, and collateral requirements across multiple pools.',
+                'Take out loans from multiple pools at once with the same miner.',
+                "Don't give up ownership of your miner.",
               ]}
             />
           </div>
